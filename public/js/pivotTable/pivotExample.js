@@ -1,10 +1,14 @@
 //Elimnar este archivo
 
-google.load("visualization", "1", {packages: ["corechart", "charteditor"]});
+//google.load("visualization", "1", {packages: ["corechart", "charteditor"]});
 $(function () {
     var derivers = $.pivotUtilities.derivers;
-    var renderers = $.extend($.pivotUtilities.renderers,
-        $.pivotUtilities.gchart_renderers);
+    var renderers = $.extend(
+        $.pivotUtilities.renderers,
+        $.pivotUtilities.c3_renderers,
+        $.pivotUtilities.d3_renderers,
+        $.pivotUtilities.export_renderers
+    );
 
     $.getJSON("/data/comercializacion", function (mps) {
         var attributes = [];

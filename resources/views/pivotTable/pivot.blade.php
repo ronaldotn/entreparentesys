@@ -3,6 +3,7 @@
 @push('css-head')
 <!-- pivot table CSS -->
 <link href="{{ asset('css/pivot.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('css/c3.min.css') }}" rel="stylesheet" type="text/css">
 <link href="{{ asset('css/zTree/zTreeStyle.css') }}" rel="stylesheet" type="text/css">
 <!-- pivot table CSS-->
 @endpush
@@ -12,12 +13,16 @@
 <script src="{{ asset('js/pivotTable/jsapi') }}"></script>
 
 <script src="{{ asset('js/pivotTable/jquery-ui.min.js') }}"></script>
+<script src="{{ asset('js/pivotTable/d3.min.js') }}"></script>
 <script src="{{ asset('js/pivotTable/jquery.ui.touch-punch.min.js') }}"></script>
+<script src="{{ asset('js/pivotTable/c3.min.js') }}"></script>
 
 <script src="{{ asset('js/pivotTable/pivot.js') }}"></script>
 <script src="{{ asset('js/pivotTable/pivot.es.js') }}"></script>
 
-<script src="{{ asset('js/pivotTable/gchart_renderers.js') }}"></script>
+<script src="{{ asset('/js/pivotTable/export_renderers.js')}}"></script>
+<script src="{{ asset('/js/pivotTable/d3_renderers.js')}}"></script>
+<script src="{{ asset('/js/pivotTable/c3_renderers.js')}}"></script>
 
 <script src="{{ asset('js/pivotTable/pivotExample.js') }}"></script>
 <!-- /pivot table JS-->

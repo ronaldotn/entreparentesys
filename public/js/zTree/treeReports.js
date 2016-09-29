@@ -350,7 +350,12 @@ treeReport.showLog = function (str) {
 };
 treeReport.pivot = function (event, treeId, treeNode, clickFlag) {
     var derivers = $.pivotUtilities.derivers;
-    var renderers = $.extend($.pivotUtilities.renderers, $.pivotUtilities.gchart_renderers);
+    var renderers = $.extend(
+        $.pivotUtilities.renderers,
+        $.pivotUtilities.c3_renderers,
+        $.pivotUtilities.d3_renderers,
+        $.pivotUtilities.export_renderers
+    );
     $.ajax({
         headers: {'X-CSRF-TOKEN': CSRF_TOKEN},
         url: "/api/v1/pivot/"+treeNode.name+"/build",
